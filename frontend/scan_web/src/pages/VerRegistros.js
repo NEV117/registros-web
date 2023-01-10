@@ -80,10 +80,18 @@ const VerRegistros = () => {
             <option value="estado_ingreso">Estado Ingreso</option>
           </select>
           <div className="grid grid-cols-1">
-            <button className="bg-gray-50 border  border-transparent text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-             onClick={handelBtn1}>Acendente</button>
-            <button className="bg-gray-50 border border-transparent text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" 
-            onClick={handelBtn2}>Descendente</button>
+            <button
+              className="bg-gray-50 border  border-transparent text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+              onClick={handelBtn1}
+            >
+              Acendente
+            </button>
+            <button
+              className="bg-gray-50 border border-transparent text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+              onClick={handelBtn2}
+            >
+              Descendente
+            </button>
           </div>
         </div>
         <div className="mx-auto py-3">

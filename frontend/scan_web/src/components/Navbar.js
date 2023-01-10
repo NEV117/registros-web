@@ -19,17 +19,17 @@ const Navbar = () => {
 
   return (
     <header>
-      <div className=" flex  justify-between items-center h-24  mx-auto px-4 text-white bg-[#0c4a6e]  ">
+      <div className=" flex  justify-between items-center h-20  mx-auto px-4 text-white bg-[#0c4a6e]  ">
         <Link to="/vistaregistro">
           <h1 className="w-full text-3xl font-bold text-white ">SERIAL SCAN</h1>
         </Link>
         {user && (
-          <ul className=" hidden md:flex">
+          <ul className=" hidden md:flex ">
             <Link to="/vistaregistro">
-              <li className="p-4  text-white "> Registrar </li>
-            </Link >
+              <li className="p-4  text-white  "> Registrar </li>
+            </Link>
             <Link to="/verregistros">
-            <li className="p-4  text-white "> Ver Registros </li>
+              <li className="p-4  text-white "> Ver Registros </li>
             </Link>
           </ul>
         )}
@@ -67,19 +67,22 @@ const Navbar = () => {
         className={
           nav
             ? "fixed left-0 top-0 w-[100%] h-[330px]  rounded-lg bg-[#0c4a6e] ease-in-out duration-500"
-            : "fixed left-[-100%]"
+            : "fixed left-[-100%] hidden"
         }
       >
         <div className="text-white grid grid-cols-2">
-        <Link to="/vistaregistro">
-          <h1 className="w-full text-3xl font-bold text-white m-4">
-            SERIAL SCAN
-          </h1>
-          <div onClick={handelNav} className="block md:hidden fixed  right-4 top-[38px]">
-          {nav ? <AiOutlineClose size={20} /> : <AiOutlineMenu size={20} />}
-          </div>
-        </Link>
+          <Link to="/vistaregistro">
+            <h1 className="w-full text-3xl font-bold text-white m-4">
+              SERIAL SCAN
+            </h1>
+          </Link>
 
+          <div
+            onClick={handelNav}
+            className="block md:hidden fixed  right-4 top-[30px]"
+          >
+            {nav ? <AiOutlineClose size={20} /> : <AiOutlineMenu size={20} />}
+          </div>
         </div>
         {user && (
           <ul className=" md:flex">
@@ -87,7 +90,7 @@ const Navbar = () => {
               <li className="p-4  text-white "> Registrar </li>
             </Link>
             <Link to="/verregistros">
-            <li className="p-4  text-white "> Ver Registros </li>
+              <li className="p-4  text-white "> Ver Registros </li>
             </Link>
           </ul>
         )}
@@ -98,11 +101,11 @@ const Navbar = () => {
               <span className=" px-4 text-white">
                 <strong>{user.email.toUpperCase().split("@")[0]}</strong>
               </span>
-              <br></br><br></br>
+              <br></br>
+              <br></br>
               <button className="" onClick={handelClick}>
                 Salir{" "}
               </button>
-              
             </div>
           )}
 
